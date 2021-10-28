@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -64,6 +66,21 @@ public class FXMLDocumentController implements Initializable {
 	
     @FXML 
     private void Login (ActionEvent event) throws Exception {
+    	conn = SQLdbConnection.ConnectDb();
+    	String sql = "Select * from USERS where USERNAME = ? and PASSWORD = ?";
+    	
+    	try {
+    		pst = conn.prepareStatement(sql);
+    		pst.setString(1, txt_username.getText());
+    		pst.setString(2, txt_password.getText());
+    		rs = pst.executeQuery();
+    		if(rs.next()) {
+    			 JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
+    		} else 
+    		JOptionPane.showMessageDialog(null, "Nom d'utilisateur et/ou mot de passe Incorrect");
+    	} catch (Exception e) {
+    		System.out.println(e);
+    	}
     }
     
 	@Override

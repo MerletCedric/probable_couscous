@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class SQLdbb {
+public class SQLdb {
 	public static void main( String args[] ) {
 	      Connection conn = null;
 	      Statement stmt = null;

@@ -20,7 +20,7 @@
             <TextField fx:id="txt_username" layoutX="95.0" layoutY="139.0" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" />
             <PasswordField fx:id="txt_password" layoutX="95.0" layoutY="197.0" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" />
             <ComboBox fx:id="type" layoutX="96.0" layoutY="80.0" prefHeight="26.0" prefWidth="126.0" promptText="Choisir un rôle" style="-fx-background-color: #F2F2F2;" />
-            <Button fx:id="btn_login" layoutX="96.0" layoutY="245.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: #F25C05;" text="Connexion" textFill="WHITE">
+            <Button fx:id="btn_login" layoutX="96.0" layoutY="245.0" mnemonicParsing="false" onAction="#Login" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: #F25C05;" text="Connexion" textFill="WHITE">
                <font>
                   <Font name="Arial Bold" size="12.0" />
                </font>
