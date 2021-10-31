@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="btn_sortie" layoutX="510.0" layoutY="32.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" style="-fx-background-color: none; -fx-border-color: #E65A4F; -fx-border-radius: 3;" text="Déconnexion" textFill="#e65a4f" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="32.0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow offsetX="3.0" offsetY="2.0">
+               <color>
+                  <Color opacity="0.25428080558776855" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <ImageView fitHeight="42.0" fitWidth="46.0" layoutX="30.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="23.0">
+         <image>
+            <Image url="@CFUNLogo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="96.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C Fun" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font name="Arial Black" size="22.0" />
+         </font>
+      </Text>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#eb5d12" height="277.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none; -fx-radius: 5;" width="262.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0">
+                     <color>
+                        <Color opacity="0.13099315762519836" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#7bb929" height="277.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none; -fx-radius: 5;" width="262.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <effect>
+                  <DropShadow offsetX="5.0" offsetY="5.0">
+                     <color>
+                        <Color opacity="0.13099315762519836" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <Button fx:id="btn_muscu" layoutX="57.0" layoutY="223.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5;" text="Musculation" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.40839043259620667" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Button fx:id="btn_fit" layoutX="335.0" layoutY="223.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="166.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5;" text="Fitness" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.40839043259620667" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
+            <Circle fx:id="couleur_muscu" fill="WHITE" layoutX="140.0" layoutY="118.0" radius="66.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none;">
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.20291097462177277" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Circle>
+            <Circle fx:id="couleur_fit" fill="WHITE" layoutX="419.0" layoutY="118.0" radius="66.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none;">
+               <effect>
+                  <DropShadow offsetX="3.0" offsetY="2.0">
+                     <color>
+                        <Color opacity="0.20291097462177277" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Circle>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F2F2F2;" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Text layoutX="10.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etat du complexe : C Fun" AnchorPane.leftAnchor="10.0" />
+            <TextField editable="false" layoutX="200.0" layoutY="37.0" prefHeight="26.0" prefWidth="160.0" promptText="jj/mm/aa" />
+            <TextField editable="false" layoutX="390.0" layoutY="37.0" prefHeight="26.0" prefWidth="160.0" promptText="hh:mm" AnchorPane.rightAnchor="10.0" />
+            <TextField editable="false" layoutX="200.0" layoutY="107.0" prefHeight="26.0" prefWidth="160.0" />
+            <TextField editable="false" layoutX="390.0" layoutY="107.0" prefHeight="26.0" prefWidth="160.0" />
+            <Text layoutX="204.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Places occupées Musculation" />
+            <Text layoutX="393.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taux occupation Musculation" />
+            <TextField editable="false" layoutX="10.0" layoutY="107.0" prefHeight="26.0" prefWidth="160.0" />
+            <Text layoutX="10.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Places disponibles Musculation" />
+            <TextField editable="false" layoutX="201.0" layoutY="175.0" prefHeight="26.0" prefWidth="160.0" />
+            <TextField editable="false" layoutX="391.0" layoutY="175.0" prefHeight="26.0" prefWidth="160.0" />
+            <Text layoutX="205.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Places occupées Fitness" />
+            <Text layoutX="394.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Taux occupation Fitness" />
+            <TextField editable="false" layoutX="11.0" layoutY="175.0" prefHeight="26.0" prefWidth="160.0" />
+            <Text layoutX="11.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Places disponibles Fitness" />
+            <Button layoutX="187.0" layoutY="236.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #E65A4F;" text="Sortir" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow offsetX="5.0" offsetY="5.0">
+               <color>
+                  <Color opacity="0.08304797857999802" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <TextField layoutX="97.0" layoutY="86.0" prefHeight="26.0" prefWidth="186.0" AnchorPane.topAnchor="86.0" />
+            <Text layoutX="228.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket de sortie" AnchorPane.leftAnchor="228.0">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Text>
+            <TextField layoutX="97.0" layoutY="219.0" prefHeight="26.0" prefWidth="186.0" AnchorPane.bottomAnchor="55.0" AnchorPane.topAnchor="219.0" />
+            <TextField layoutX="96.0" layoutY="153.0" prefHeight="26.0" prefWidth="186.0" AnchorPane.bottomAnchor="121.0" AnchorPane.leftAnchor="96.0" AnchorPane.rightAnchor="278.0" AnchorPane.topAnchor="153.0" />
+            <Text layoutX="14.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date :" AnchorPane.leftAnchor="14.0" />
+            <Text layoutX="14.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Heure :" AnchorPane.leftAnchor="14.0" />
+            <Text layoutX="14.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Montant :" AnchorPane.leftAnchor="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
