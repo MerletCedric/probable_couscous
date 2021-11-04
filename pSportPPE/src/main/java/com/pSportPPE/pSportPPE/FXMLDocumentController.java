@@ -54,10 +54,10 @@ public class FXMLDocumentController implements Initializable {
     private TextField txt_username_up;
 
     @FXML
-    private ComboBox<?> type;
+    private ComboBox<String> type;
 
     @FXML
-    private ComboBox<?> type_up;
+    private ComboBox<String> type_up;
     
   
     Connection conn = null;
@@ -88,12 +88,13 @@ public class FXMLDocumentController implements Initializable {
     @FXML 
     private void Login (ActionEvent event) throws Exception {
     	conn = SQLdbConnection.ConnectDb();
-    	String sql = "Select * from USERS where USERNAME = ? and PASSWORD = ?";
+    	String sql = "Select * from USERS where USERNAME = ? and PASSWORD = ? and TYPE = ?";
     	
     	try {
     		pst = conn.prepareStatement(sql);
     		pst.setString(1, txt_username.getText());
     		pst.setString(2, txt_password.getText());
+    		pst.setString(3,  type.getValue().toString());
     		rs = pst.executeQuery();
     		if(rs.next()) {
     			 JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
@@ -110,9 +111,28 @@ public class FXMLDocumentController implements Initializable {
     	}
     }
     
+    public void add_users (ActionEvent event) {
+    	
+    	conn = SQLdbConnection.ConnectDb();
+    	String sql = "insert into users (USERNAME, PASSWORD, EMAIL, TYPE) values (?,?,?,?)";
+    try {
+    	pst = conn.prepareStatement (sql);
+    	pst.setString(1, txt_username_up.getText());
+    	pst.setString(2, txt_password_up.getText());
+    	pst.setString(3, type_up.getValue().toString());
+    	pst.setString(4, txt_mail_up.getText());
+    	pst.execute();
+    	
+    	JOptionPane.showMessageDialog(null, "Saved");	
+    } catch (Exception e) {
+    	JOptionPane.showMessageDialog(null, e);
+    }
+    }
+    
 	@Override
 	public void initialize (URL url, ResourceBundle rb) {
-		// TODO
+		type_up.getItems().addAll("Client","Gestionnaire");
+		type.getItems().addAll("Client","Gestionnaire");
 	}
 
 }

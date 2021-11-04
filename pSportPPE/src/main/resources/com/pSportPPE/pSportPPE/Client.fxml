@@ -36,7 +36,7 @@
             <Font name="Arial Black" size="22.0" />
          </font>
       </Text>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
          <children>
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#eb5d12" height="277.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: none; -fx-radius: 5;" width="262.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
                <effect>
@@ -131,7 +131,7 @@
             </DropShadow>
          </effect>
       </AnchorPane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="80.0">
          <children>
             <TextField layoutX="97.0" layoutY="86.0" prefHeight="26.0" prefWidth="186.0" AnchorPane.topAnchor="86.0" />
             <Text layoutX="228.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ticket de sortie" AnchorPane.leftAnchor="228.0">
