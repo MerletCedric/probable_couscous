@@ -50,7 +50,7 @@ public class RunComplexe {
 		try
 		{
 			// choisir le répertoire et le nom de l'image ainsi que son format
-			ean13.draw("c://ean13.gif");
+			ean13.draw("/home/kerherve/Images/connard.png");
 
 		}
 		catch (Exception e) {
