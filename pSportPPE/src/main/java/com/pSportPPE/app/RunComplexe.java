@@ -1,5 +1,6 @@
 package com.pSportPPE.app;
 
+import com.keepautomation.barcode.*;
 public class RunComplexe {
 	private static int nbMuscu = 4;
 	private static int nbFit = 5;
@@ -33,6 +34,29 @@ public class RunComplexe {
 			System.out.print(leComplexe.lesInfos());
 			repAutre = Character.toUpperCase(javax.swing.JOptionPane.showInputDialog(AUTRE).charAt(0));
 		}
+
+		// création du code barre
+		BarCode ean13 = new BarCode();
+
+		ean13.setCodeToEncode("123456789999");
+		ean13.setSymbology(IBarCode.EAN13);
+		ean13.setX(2);
+		ean13.setY(50);
+		ean13.setRightMargin(0);
+		ean13.setLeftMargin(0);
+		ean13.setTopMargin(0);
+		ean13.setBottomMargin(0);
+
+		try
+		{
+			// choisir le répertoire et le nom de l'image ainsi que son format
+			ean13.draw("c://ean13.gif");
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
 		System.exit(0);	
 	}
 }
