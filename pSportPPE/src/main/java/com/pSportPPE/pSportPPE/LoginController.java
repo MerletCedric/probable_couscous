@@ -27,7 +27,7 @@ import java.sql.ResultSet;
  * @author cedric
  *
  */
-public class FXMLDocumentController implements Initializable {
+public class LoginController implements Initializable {
 	
 	@FXML
     private Button btn_login;
@@ -105,7 +105,7 @@ public class FXMLDocumentController implements Initializable {
     			 mainStage.setScene(scene);
     			 mainStage.show();
     		} else 
-    		JOptionPane.showMessageDialog(null, "Nom d'utilisateur et/ou mot de passe Incorrect");
+    		JOptionPane.showMessageDialog(null, "Nom d'utilisateur et/ou mot de passe incorrect");
     	} catch (Exception e) {
     		System.out.println(e);
     	}
@@ -119,8 +119,8 @@ public class FXMLDocumentController implements Initializable {
     	pst = conn.prepareStatement (sql);
     	pst.setString(1, txt_username_up.getText());
     	pst.setString(2, txt_password_up.getText());
-    	pst.setString(3, type_up.getValue().toString());
-    	pst.setString(4, txt_mail_up.getText());
+    	pst.setString(3, txt_mail_up.getText());
+    	pst.setString(4, type_up.getValue().toString());
     	pst.execute();
     	
     	JOptionPane.showMessageDialog(null, "Saved");	
@@ -131,7 +131,7 @@ public class FXMLDocumentController implements Initializable {
     
 	@Override
 	public void initialize (URL url, ResourceBundle rb) {
-		type_up.getItems().addAll("Client","Gestionnaire");
+		type_up.getItems().addAll("Client");
 		type.getItems().addAll("Client","Gestionnaire");
 	}
 

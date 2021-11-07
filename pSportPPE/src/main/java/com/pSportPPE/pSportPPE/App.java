@@ -18,7 +18,7 @@ public class App extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("Login"));
-        stage.setTitle("Connexion à l'application C-FUN");
+        stage.setTitle("C Fun");
         stage.setScene(scene);
         stage.show();
     }

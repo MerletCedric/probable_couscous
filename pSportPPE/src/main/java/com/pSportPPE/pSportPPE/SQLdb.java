@@ -16,7 +16,7 @@ public class SQLdb {
 
 	         stmt = conn.createStatement();
 	         String sql = "CREATE TABLE USERS" +
-	        		  "(USER_ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "  +
+	        		  "(USER_ID INTEGER  PRIMARY KEY AUTOINCREMENT NOT NULL, "  +
 	        		  "USERNAME CHAR NOT NULL, " +
 	        		  "PASSWORD CHAR NOT NULL, " +
 	        		  "EMAIL 	CHAR NOT NULL, " +
