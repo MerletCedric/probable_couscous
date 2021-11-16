@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pSportPPE.pSportPPE.FXMLDocumentController">
+   <children>
+      <AnchorPane fx:id="pane_login" layoutX="111.0" layoutY="53.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Text fill="#f25c05" layoutX="136.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Connexion">
+               <font>
+                  <Font name="Arial Black" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txt_username" layoutX="95.0" layoutY="139.0" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" />
+            <PasswordField fx:id="txt_password" layoutX="95.0" layoutY="197.0" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" />
+            <ComboBox fx:id="type" layoutX="96.0" layoutY="80.0" prefHeight="26.0" prefWidth="126.0" promptText="Choisir un rôle" style="-fx-background-color: #F2F2F2;" />
+            <Button fx:id="btn_login" layoutX="96.0" layoutY="245.0" mnemonicParsing="false" onAction="#Login" prefHeight="26.0" prefWidth="209.0" style="-fx-background-color: #F25C05;" text="Connexion" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="234.0" layoutY="285.0" mnemonicParsing="false" onAction="#SignuppaneShow" prefHeight="26.0" prefWidth="71.0" style="-fx-background-color: none; -fx-border-color: #7bb929; -fx-border-radius: 3;" text="S'inscrire" textFill="WHITE" />
+            <Text fill="WHITE" layoutX="97.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom d'utilisateur" />
+            <Text fill="WHITE" layoutX="97.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" />
+            <Text fill="WHITE" layoutX="97.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pas encore de compte ?" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="pane_signup" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="30.0">
+         <children>
+            <Text fill="#7bb929" layoutX="135.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inscription">
+               <font>
+                  <Font name="Arial Black" size="22.0" />
+               </font>
+            </Text>
+            <TextField fx:id="txt_username_up" layoutX="94.0" layoutY="117.0" prefHeight="26.0" prefWidth="210.0" promptText="Entre votre nom d'utilisateur" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" />
+            <TextField fx:id="txt_mail_up" layoutX="94.0" layoutY="162.0" prefHeight="26.0" prefWidth="210.0" promptText="Entrer votre adresse e-mail" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" />
+            <TextField fx:id="txt_password_up" layoutX="94.0" layoutY="207.0" prefHeight="26.0" prefWidth="210.0" promptText="Entrer votre mot de passe" style="-fx-background-color: none; -fx-border-color: white; -fx-border-radius: 5; -fx-text-fill : white;" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" />
+            <ComboBox fx:id="type_up" layoutX="94.0" layoutY="72.0" prefHeight="26.0" prefWidth="210.0" promptText="S'inscrire en temps que ?" style="-fx-background-color: #F2F2F2; -fx-border-color: white; -fx-border-radius: 5;" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0" />
+            <Button layoutX="94.0" layoutY="256.0" mnemonicParsing="false" onAction="#add_users" prefHeight="26.0" prefWidth="210.0" style="-fx-background-color: #7bb929;" text="S'inscrire" textFill="WHITE" AnchorPane.leftAnchor="94.0" AnchorPane.rightAnchor="94.0">
+               <font>
+                  <Font name="Arial Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="94.0" layoutY="294.0" mnemonicParsing="false" onAction="#LoginpaneShow" style="-fx-background-color: none; -fx-border-color: #F25C05; -fx-border-radius: 5;" text="Retourner à la connexion" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
