@@ -5,12 +5,21 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Arrivee {
-	private static int numeroSortie = 0;
-	private int numeroArrivee;
-
+	public static int numeroSortie = 0;
+	private static int numeroArrivee;
+	public static int numeroInter = numeroSortie;
+	public static String NumeroInterChange(int numeroInter) {
+		++numeroInter;
+		String numeroInterString = Integer.toString(numeroInter);
+		return numeroInterString;
+	}
+	
+	public static String numeroI = NumeroInterChange(numeroInter);
+	
 	public int getNumeroArrivee() {
 		return numeroArrivee;
 	}
+	
 
 	private char choixSport;
 
