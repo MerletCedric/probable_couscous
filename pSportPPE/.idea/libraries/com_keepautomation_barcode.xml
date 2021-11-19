@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="com.keepautomation.barcode">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Téléchargements/KA.Barcode.for.Java/Library/jdk1.5/com.keepautomation.barcode.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
