@@ -11,9 +11,6 @@ import javafx.event.ActionEvent;
 
 public class Ticket {
 	
-	 Connection conn = null;
-	 PreparedStatement pst = null;
-	   	
 	 static Date date = Calendar.getInstance().getTime();  
 	 static SimpleDateFormat day = new SimpleDateFormat("dd/MM/yyyy");
 	 static String currentDay = day.format(date);  

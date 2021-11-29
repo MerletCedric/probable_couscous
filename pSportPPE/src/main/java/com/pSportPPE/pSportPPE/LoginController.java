@@ -93,23 +93,23 @@ public class LoginController implements Initializable {
 			pst.setString(2, txt_password.getText());
 			pst.setString(3, type.getValue().toString());
 			rs = pst.executeQuery();
-			if (rs.next() & type.getValue().toString() == "Client") {
-				JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
-				btn_login.getScene().getWindow().hide();
-				Parent root = FXMLLoader.load(getClass().getResource("Client.fxml"));
-				Stage mainStage = new Stage();
-				Scene scene = new Scene(root);
-				mainStage.setScene(scene);
-				mainStage.show();
-			} else if (rs.next() & type.getValue().toString() == "Gestionnaire") {
-				JOptionPane.showMessageDialog(null, "Nom d'utilisateur et mot de passe correct");
-				btn_login.getScene().getWindow().hide();
-				Parent root = FXMLLoader.load(getClass().getResource("Gestionnaire.fxml"));
-				Stage mainStage = new Stage();
-				Scene scene = new Scene(root);
-				mainStage.setScene(scene);
-				mainStage.show();
-			} else 
+			if (rs.next()) {
+				if (type.getValue().toString() == "Client") {
+					btn_login.getScene().getWindow().hide();
+					Parent root = FXMLLoader.load(getClass().getResource("Client.fxml"));
+					Stage mainStage = new Stage();
+					Scene scene = new Scene(root);
+					mainStage.setScene(scene);
+					mainStage.show();
+				} else {
+					btn_login.getScene().getWindow().hide();
+					Parent root = FXMLLoader.load(getClass().getResource("Gestionnaire.fxml"));
+					Stage mainStage = new Stage();
+					Scene scene = new Scene(root);
+					mainStage.setScene(scene);
+					mainStage.show();
+				}
+			} else
 				JOptionPane.showMessageDialog(null, "Nom d'utilisateur et/ou mot de passe incorrect");
 		} catch (Exception e) {
 			System.out.println(e);
